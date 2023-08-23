@@ -1,5 +1,8 @@
 <?php
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
@@ -9,3 +12,15 @@ $config=dirname(__FILE__).'/protected/config/main.php';
 
 require_once($yii);
 Yii::createWebApplication($config)->run();
+
+class LoggerFactory
+{
+    public static function createLogger($name, $logFilePath)
+    {
+        $logger = new Logger($name);
+        $handler = new StreamHandler($logFilePath, Logger::DEBUG);
+        $logger->pushHandler($handler);
+
+        return $logger;
+    }
+}

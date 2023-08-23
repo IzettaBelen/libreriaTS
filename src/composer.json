@@ -6,6 +6,9 @@
             "NamespaceProyectoA\\": "web/"
         }
     },
+    "support": {
+        "issues": "https://github.com/IzettaBelen/libreriaTS/tree/main/src"
+    },
     "require": {
         "monolog/monolog": "1.25"
     }
