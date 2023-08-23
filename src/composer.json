@@ -1,0 +1,12 @@
+{
+    "name": "tsbase/logs",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "NamespaceProyectoA\\": "web/"
+        }
+    },
+    "require": {
+        "monolog/monolog": "1.25"
+    }
+}
